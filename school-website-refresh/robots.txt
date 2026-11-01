@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api
+Disallow: /portal
+
+Sitemap: https://maryroyalschool.co.ke/sitemap.xml

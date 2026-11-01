@@ -1,0 +1,3 @@
+# Learner guide
+
+Sign in with the credentials provided by the school office and change the temporary password when prompted. Your account is created with your admission and activated after approval. **My learning** is tailored to your grade and includes released results, subject progress, feedback on marked assignments, teacher-shared video and reading resources, and short Number Quest and Science Explorer practice games. Game scores are saved to your own progress. **Assignments** shows classwork sent by your teacher so you can submit answers and see marks or feedback. Attendance and released school records are available from your learner profile. Learners cannot view fees, complaints, or other pupils’ records.

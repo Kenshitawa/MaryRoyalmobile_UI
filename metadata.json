@@ -1,0 +1,6 @@
+{
+  "name": "Mary Royal",
+  "description": "School Management System for Mary Royal School, Kisumu — CBE assessments, admissions, attendance, and finance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

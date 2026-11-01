@@ -1,0 +1,69 @@
+{
+  "name": "mary-royal-school-management",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "seed:demo": "tsx prisma/seed.ts && tsx prisma/seed-demo.ts",
+    "reset:fresh": "tsx scripts/reset-fresh.ts",
+    "dev": "next dev",
+    "dev:test": "node scripts/dev-test.mjs",
+    "build": "prisma generate && next build",
+    "build:production": "prisma generate --schema prisma/postgresql/schema.prisma && next build",
+    "db:migrate:production": "prisma migrate deploy --schema prisma/postgresql/schema.prisma",
+    "security:check-supabase": "prisma generate --schema prisma/postgresql/schema.prisma && tsx scripts/check-supabase-security.ts",
+    "security:scan-history": "node scripts/scan-secrets-history.mjs",
+    "bootstrap:director": "tsx scripts/bootstrap-director.ts",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "node scripts/run-e2e.mjs",
+    "backup": "tsx scripts/backup-postgres.ts",
+    "backup:sqlite": "tsx scripts/backup.ts",
+    "restore:postgres": "prisma generate --schema prisma/postgresql/schema.prisma && tsx scripts/restore-postgres.ts",
+    "retention:enforce": "prisma generate --schema prisma/postgresql/schema.prisma && tsx scripts/enforce-retention.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "bcryptjs": "^3.0.2",
+    "framer-motion": "^14.6.0",
+    "jose": "^6.1.0",
+    "lucide-react": "^0.468.0",
+    "next": "^15.5.6",
+    "pdf-lib": "^1.17.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "recharts": "^3.10.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.18.12",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "^15.5.6",
+    "prisma": "^6.19.0",
+    "tailwindcss": "^4.1.16",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  },
+  "allowScripts": {
+    "@prisma/client@6.19.3": true,
+    "@prisma/engines@6.19.3": true,
+    "prisma@6.19.3": true,
+    "esbuild@0.28.2": true,
+    "unrs-resolver@1.12.2": true
+  },
+  "overrides": {
+    "postcss": "^8.5.31",
+    "deepmerge-ts": "^8.0.2"
+  },
+  "engines": {
+    "node": ">=20.9 <23"
+  }
+}

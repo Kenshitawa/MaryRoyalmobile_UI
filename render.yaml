@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: mary-royal-school
+    runtime: node
+    buildCommand: npm ci && npm run build:production
+    preDeployCommand: npm run db:migrate:production
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: DIRECT_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PRIVATE_UPLOADS_DIR
+        value: /opt/render/project/src/storage/private
+      - key: UPLOADS_DIR
+        value: /opt/render/project/src/storage/assignments
+    disk:
+      name: mary-royal-uploads
+      mountPath: /opt/render/project/src/storage
+      sizeGB: 5

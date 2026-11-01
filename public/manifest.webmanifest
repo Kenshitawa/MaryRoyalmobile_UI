@@ -1,0 +1,10 @@
+{
+ "name":"Mary Royal School",
+ "short_name":"Mary Royal",
+ "description":"Mary Royal School · Hard work pays",
+ "start_url":"/",
+ "display":"standalone",
+ "background_color":"#f5f8fd",
+ "theme_color":"#1d4ed8",
+ "icons":[{"src":"/mary-royal-icon.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}

@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Mary Royal School | Excellence in Holistic Education & Nurturing Future Leaders</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Mary Royal School | Excellence in Holistic Education & Nurturing Future Leaders">
+    <meta name="description" content="Mary Royal School provides top-tier early years, primary, and junior secondary education focused on academic excellence, character building, and creative growth.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maryroyalschool.sc.ke/">
+    <meta property="og:title" content="Mary Royal School | Nurturing Future Leaders">
+    <meta property="og:description" content="Discover holistic education, state-of-the-art facilities, and vibrant extracurricular activities at Mary Royal School.">
+    <meta property="og:image" content="assets/images/hero-banner.webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Royal Theme -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        royal: {
+                            50: '#f0f4ff',
+                            100: '#e0e9fe',
+                            200: '#bae0fd',
+                            600: '#1e40af',
+                            700: '#1d4ed8',
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                            gold: '#d97706',
+                            goldHover: '#b45309',
+                            goldLight: '#fef3c7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 25px -5px rgba(29, 78, 216, 0.3)',
+                        'gold-glow': '0 0 25px -5px rgba(217, 119, 6, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Variables for Palette */
+        :root {
+            --color-primary: #1d4ed8;
+            --color-primary-dark: #1e3a8a;
+            --color-accent: #d97706;
+            --color-bg-light: #f8fafc;
+            --color-surface-light: #ffffff;
+        }
+
+        /* Mobile safe-area padding for notched screens */
+        .header-safe {
+            padding-top: max(0.75rem, env(safe-area-inset-top));
+        }
+
+        /* Prevent background scroll when mobile nav or modal is active */
+        body.scroll-locked {
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Parallax & Floating Animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        /* Modal animation */
+        .modal-enter {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        .modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-royal-800 text-amber-300 text-xs sm:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
+        <span class="bg-amber-500 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Admissions Open</span>
+        <span>2026/2027 Academic Year Registration is Ongoing!</span>
+        <button onclick="openModal('admissions-modal')" class="underline hover:text-white font-semibold ml-2 transition-colors">Apply Now &rarr;</button>
+    </div>
+
+    <!-- MAIN HEADER & NAVIGATION -->
+    <header id="main-header" class="sticky top-0 z-50 w-full header-safe bg-white/95 dark:bg-slate-900/95 border-b border-slate-200/80 dark:border-slate-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-royal-600 rounded-lg p-1">
+                    <img src="assets/images/logo-transparent.webp"
+                         onerror="this.src='https://placehold.co/120x120/1d4ed8/ffffff?text=MRS'"
+                         alt="Mary Royal School Logo"
+                         class="h-10 w-10 sm:h-12 sm:w-12 object-contain group-hover:scale-105 transition-transform duration-300" />
+                    <div>
+                        <span class="font-display font-extrabold text-lg sm:text-2xl tracking-tight text-royal-800 dark:text-white block leading-none">
+                            MARY ROYAL
+                        </span>
+                        <span class="text-[10px] sm:text-xs text-amber-600 dark:text-amber-400 font-bold uppercase tracking-widest block mt-0.5">
+                            School of Excellence
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-4">
+                    <a href="#about" class="px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-royal-700 dark:hover:text-amber-400 rounded-lg transition-colors">About Us</a>
+                    <a href="#academics" class="px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-royal-700 dark:hover:text-amber-400 rounded-lg transition-colors">Academics</a>
+                    <a href="#activities" class="px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-royal-700 dark:hover:text-amber-400 rounded-lg transition-colors">Activities & Life</a>
+                    <a href="#gallery" class="px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-royal-700 dark:hover:text-amber-400 rounded-lg transition-colors">Gallery</a>
+                    <a href="#events" class="px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-royal-700 dark:hover:text-amber-400 rounded-lg transition-colors">Events</a>
+                    <a href="#contact" class="px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-royal-700 dark:hover:text-amber-400 rounded-lg transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA & Theme Toggle -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2.5 min-w-[44px] min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-royal-600 transition-colors">
+                        <i id="theme-icon" class="fas fa-moon text-base"></i>
+                    </button>
+                    <a href="https://portal.maryroyalschool.co.ke/" class="min-h-[44px] px-4 py-2 text-sm font-semibold text-royal-700 dark:text-royal-100 border border-royal-600 hover:bg-royal-50 dark:hover:bg-slate-800 rounded-xl transition-all flex items-center justify-center">
+                        Staff / Parent / Learner Portal
+                    </a>
+                    <button onclick="openModal('admissions-modal')" class="min-h-[44px] px-5 py-2 text-sm font-bold text-white bg-royal-700 hover:bg-royal-800 rounded-xl shadow-md hover:shadow-glow transition-all flex items-center justify-center">
+                        Admissions
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation Controls (Hamburger + Dark Toggle) -->
+                <div class="flex items-center gap-2 md:hidden">
+                    <button id="mobile-theme-toggle" aria-label="Toggle Dark Mode" class="p-2.5 min-w-[44px] min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200">
+                        <i id="mobile-theme-icon" class="fas fa-moon"></i>
+                    </button>
+
+                    <button id="mobile-menu-btn"
+                            aria-expanded="false"
+                            aria-controls="mobile-nav-drawer"
+                            aria-label="Open Navigation Menu"
+                            class="min-w-[44px] min-h-[44px] p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-royal-600 flex items-center justify-center">
+                        <i id="menu-icon-bars" class="fas fa-bars text-xl"></i>
+                        <i id="menu-icon-close" class="fas fa-times text-xl hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION DRAWER & BACKDROP -->
+    <!-- Solid/Near-Solid crisp background with high z-index fixing blur bug -->
+    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-slate-900/70 z-40 hidden transition-opacity duration-300" onclick="closeMobileMenu()"></div>
+
+    <aside id="mobile-nav-drawer"
+           class="fixed top-0 right-0 z-50 w-[85%] max-w-sm h-full bg-white dark:bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto"
+           aria-label="Mobile Navigation Drawer">
+
+        <div class="p-6">
+            <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
+                <div class="flex items-center gap-2">
+                    <img src="assets/images/logo-transparent.webp" onerror="this.src='https://placehold.co/60x60/1d4ed8/ffffff?text=MRS'" alt="Mary Royal School" class="h-8 w-8 object-contain">
+                    <span class="font-display font-bold text-lg text-royal-800 dark:text-white">Mary Royal</span>
+                </div>
+                <button onclick="closeMobileMenu()" aria-label="Close menu" class="min-w-[44px] min-h-[44px] p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white rounded-lg flex items-center justify-center">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Prominent Action Buttons -->
+            <div class="mt-6 flex flex-col gap-3">
+                <a href="https://portal.maryroyalschool.co.ke/" class="w-full min-h-[48px] py-3 text-center text-sm font-bold text-royal-700 dark:text-royal-200 bg-royal-50 dark:bg-slate-800 border border-royal-200 dark:border-slate-700 rounded-xl flex items-center justify-center gap-2">
+                    <i class="fas fa-user-lock"></i> Staff / Parent / Learner Portal
+                </a>
+                <button onclick="closeMobileMenu(); openModal('admissions-modal');" class="w-full min-h-[48px] py-3 text-center text-sm font-bold text-white bg-royal-700 hover:bg-royal-800 rounded-xl shadow-md flex items-center justify-center gap-2">
+                    <i class="fas fa-file-signature"></i> Apply for Admission
+                </button>
+            </div>
+
+            <!-- Mobile Nav Links -->
+            <nav class="mt-8 flex flex-col space-y-2">
+                <a href="#about" onclick="closeMobileMenu()" class="min-h-[44px] px-4 py-3 text-base font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl flex items-center justify-between">
+                    <span>About Us</span>
+                    <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+                </a>
+                <a href="#academics" onclick="closeMobileMenu()" class="min-h-[44px] px-4 py-3 text-base font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl flex items-center justify-between">
+                    <span>Academics</span>
+                    <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+                </a>
+                <a href="#activities" onclick="closeMobileMenu()" class="min-h-[44px] px-4 py-3 text-base font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl flex items-center justify-between">
+                    <span>Activities & Life</span>
+                    <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+                </a>
+                <a href="#gallery" onclick="closeMobileMenu()" class="min-h-[44px] px-4 py-3 text-base font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl flex items-center justify-between">
+                    <span>Gallery</span>
+                    <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+                </a>
+                <a href="#events" onclick="closeMobileMenu()" class="min-h-[44px] px-4 py-3 text-base font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl flex items-center justify-between">
+                    <span>Events & News</span>
+                    <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+                </a>
+                <a href="#contact" onclick="closeMobileMenu()" class="min-h-[44px] px-4 py-3 text-base font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl flex items-center justify-between">
+                    <span>Contact Us</span>
+                    <i class="fas fa-chevron-right text-xs text-slate-400"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50">
+            <p class="text-xs text-slate-500 text-center">Need immediate assistance?</p>
+            <a href="tel:+254718216374" class="mt-2 text-center block text-sm font-bold text-royal-700 dark:text-amber-400">
+                <i class="fas fa-phone-alt mr-1"></i> 0718216374
+            </a>
+        </div>
+    </aside>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-28 bg-gradient-to-b from-royal-50/60 via-slate-50 to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-950">
+        <!-- Floating Decorative Elements -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-royal-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+                <!-- Left Column Text & Action -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800 text-amber-800 dark:text-amber-300 text-xs sm:text-sm font-semibold mb-6">
+                        <i class="fas fa-star text-amber-500"></i>
+                        <span>Nurturing Minds, Building Character & Integrity</span>
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                        Inspiring Today's Learners to Become <span class="bg-gradient-to-r from-royal-700 via-royal-600 to-amber-600 bg-clip-text text-transparent">Tomorrow's Leaders</span>
+                    </h1>
+
+                    <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Mary Royal School offers an enriched Competency-Based Curriculum (CBC) integrated with values, modern technology, sports, and creative arts in a safe, nurturing environment.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <button onclick="openModal('admissions-modal')" class="w-full sm:w-auto min-h-[52px] px-8 py-3.5 bg-royal-700 hover:bg-royal-800 text-white font-bold rounded-xl shadow-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2">
+                            <span>Enroll Your Child</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <a href="#about" class="w-full sm:w-auto min-h-[52px] px-8 py-3.5 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-semibold border border-slate-300 dark:border-slate-700 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fas fa-play-circle text-royal-600 dark:text-amber-400"></i>
+                            <span>Explore Our School</span>
+                        </a>
+                    </div>
+
+                    <!-- Key Stats Strip -->
+                    <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <span class="block font-display text-2xl sm:text-3xl font-extrabold text-royal-800 dark:text-amber-400">100%</span>
+                            <span class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Academic Pass Rate</span>
+                        </div>
+                        <div>
+                            <span class="block font-display text-2xl sm:text-3xl font-extrabold text-royal-800 dark:text-amber-400">15+</span>
+                            <span class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Co-Curricular Clubs</span>
+                        </div>
+                        <div>
+                            <span class="block font-display text-2xl sm:text-3xl font-extrabold text-royal-800 dark:text-amber-400">1:15</span>
+                            <span class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Teacher-Student Ratio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column Hero Visual -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Polished Frame Glow -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-royal-600 to-amber-500 rounded-3xl blur-lg opacity-30 dark:opacity-50 animate-pulse"></div>
+
+                        <div class="relative rounded-3xl overflow-hidden bg-white dark:bg-slate-800 border-4 border-white dark:border-slate-800 shadow-2xl">
+                            <img src="assets/images/hero-banner.webp"
+                                 onerror="this.src='https://placehold.co/800x600/1d4ed8/ffffff?text=Mary+Royal+School+Banner'"
+                                 alt="Mary Royal School Students"
+                                 class="w-full h-[350px] sm:h-[450px] object-cover object-center scale-105"
+                                 loading="eager" />
+
+                            <!-- Overlay Card -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-lg flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                                    <i class="fas fa-award text-lg"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Top Rated CBC School</h2>
+                                    <p class="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white">Providing premier early childhood & junior secondary learning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge -->
+                        <div class="absolute -top-4 -right-4 bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 hidden sm:flex items-center gap-3 animate-float">
+                            <div class="w-10 h-10 rounded-xl bg-royal-100 dark:bg-royal-900 text-royal-700 dark:text-royal-200 flex items-center justify-center font-bold">
+                                <i class="fas fa-graduation-cap text-lg"></i>
+                            </div>
+                            <div class="pr-2">
+                                <p class="text-xs font-bold text-slate-900 dark:text-white">Holistic Growth</p>
+                                <p class="text-[10px] text-slate-500">Academics & Values</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 sm:py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 mb-2">About Mary Royal School</h2>
+                <h3 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">A Center of Academic Rigor & Ethical Foundation</h3>
+                <p class="mt-4 text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+                    We are dedicated to equipping every learner with critical thinking, moral integrity, digital literacy, and practical skills required to excel in modern society.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 hover:border-royal-500 dark:hover:border-amber-400 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 rounded-xl bg-royal-600/10 text-royal-700 dark:text-amber-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-3">Our Vision</h4>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        To be a premier institution recognized for nurturing well-rounded, innovative, and ethically grounded global citizens.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 hover:border-royal-500 dark:hover:border-amber-400 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-3">Our Mission</h4>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        Providing a dynamic, child-centered education that fosters academic excellence, talent development, and strong moral principles.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 hover:border-royal-500 dark:hover:border-amber-400 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-3">Core Values</h4>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        Integrity, Respect, Continuous Improvement, Innovation, Compassion, and Teamwork guide every action in our school community.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Supporting Educator Showcase -->
+            <div class="mt-16 rounded-3xl overflow-hidden bg-royal-900 text-white p-8 sm:p-12 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-4">
+                        <img src="assets/images/teacher-supporting-learner.webp"
+                             onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Teacher+Supporting+Learner'"
+                             alt="Teacher Supporting Learner"
+                             class="rounded-2xl w-full h-64 lg:h-80 object-cover shadow-lg" />
+                    </div>
+                    <div class="lg:col-span-8">
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Personalized Mentorship</span>
+                        <h4 class="font-display text-2xl sm:text-3xl font-extrabold mt-2 mb-4">Dedicated Educators Who Care For Every Child</h4>
+                        <p class="text-royal-100 text-base leading-relaxed mb-6">
+                            Our qualified teaching staff ensures that no learner is left behind. Through individual attention, practical exercises, and psychological support, we create a thriving environment for academic and emotional resilience.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-white/10 px-4 py-2 rounded-lg text-xs font-semibold"><i class="fas fa-check text-amber-400 mr-2"></i>Certified CBC Facilitators</span>
+                            <span class="bg-white/10 px-4 py-2 rounded-lg text-xs font-semibold"><i class="fas fa-check text-amber-400 mr-2"></i>STEM & Coding Tutors</span>
+                            <span class="bg-white/10 px-4 py-2 rounded-lg text-xs font-semibold"><i class="fas fa-check text-amber-400 mr-2"></i>Guidance & Counseling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ACADEMIC PROGRAMMES -->
+    <section id="academics" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-royal-700 dark:text-amber-400 mb-2">Educational Pathways</h2>
+                <h3 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Structured Learning at Every Stage</h3>
+                <p class="mt-4 text-slate-600 dark:text-slate-300 text-base">From foundation years to junior secondary, our curriculum builds confidence and competence.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Level 1 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="assets/images/early-years-school-event.webp"
+                                 onerror="this.src='https://placehold.co/600x400/1d4ed8/ffffff?text=Early+Years'"
+                                 alt="Early Years Education"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                            <span class="absolute top-4 left-4 bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">Playgroup - PP2</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Early Years Education (EYE)</h4>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                                Play-based and activity-driven learning designed to spark curiosity, social skills, language acquisition, and motor coordination.
+                            </p>
+                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-4">
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>Phonics & Early Literacy</li>
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>Creative Arts & Music Play</li>
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>Safe Playground Facilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('admissions-modal')" class="w-full py-2.5 text-xs font-bold text-royal-700 dark:text-amber-400 bg-royal-50 dark:bg-slate-800 rounded-xl hover:bg-royal-100 transition-colors">Learn More & Register</button>
+                    </div>
+                </div>
+
+                <!-- Level 2 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="assets/images/junior-learners-performing.webp"
+                                 onerror="this.src='https://placehold.co/600x400/1d4ed8/ffffff?text=Primary+School'"
+                                 alt="Primary School Learners"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                            <span class="absolute top-4 left-4 bg-royal-700 text-white text-xs font-bold px-3 py-1 rounded-full">Grade 1 - Grade 6</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Primary School (CBC)</h4>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                                Comprehensive CBC framework laying firm foundations in Mathematics, Science, Social Studies, ICT, and Languages.
+                            </p>
+                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-4">
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>Interactive Computer Labs</li>
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>STEM Practical Projects</li>
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>Languages (English, Kiswahili, French)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('admissions-modal')" class="w-full py-2.5 text-xs font-bold text-royal-700 dark:text-amber-400 bg-royal-50 dark:bg-slate-800 rounded-xl hover:bg-royal-100 transition-colors">Learn More & Register</button>
+                    </div>
+                </div>
+
+                <!-- Level 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="assets/images/graduation-celebration.webp"
+                                 onerror="this.src='https://placehold.co/600x400/1d4ed8/ffffff?text=Junior+Secondary'"
+                                 alt="Junior Secondary Learners"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                            <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">Grade 7 - Grade 9</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Junior Secondary School</h4>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+                                Advanced learning pathways featuring integrated science laboratories, technical skills, leadership, and career guidance.
+                            </p>
+                            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-4">
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>Fully Equipped Science Labs</li>
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>Career Mentorship & Counseling</li>
+                                <li><i class="fas fa-check-circle text-royal-600 mr-2"></i>Leadership & Public Speaking</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('admissions-modal')" class="w-full py-2.5 text-xs font-bold text-royal-700 dark:text-amber-400 bg-royal-50 dark:bg-slate-800 rounded-xl hover:bg-royal-100 transition-colors">Learn More & Register</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ACTIVITIES & SCHOOL LIFE -->
+    <section id="activities" class="py-16 sm:py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 mb-2">Vibrant Student Life</h2>
+                <h3 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Co-Curricular & Talent Nurturing</h3>
+                <p class="mt-4 text-slate-600 dark:text-slate-300 text-base">Education goes beyond books. We discover and sharpen every child's unique talents.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Activity 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-all">
+                    <img src="assets/images/cultural-dance-performance.webp" onerror="this.src='https://placehold.co/400x300/1d4ed8/ffffff?text=Performing+Arts'" alt="Music & Cultural Arts" class="w-full h-40 object-cover rounded-xl mb-4" />
+                    <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">Music & Cultural Arts</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">Drama, traditional dance, choir, and instrumental training for expression.</p>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-all">
+                    <img src="assets/images/learners-in-school-parade.webp" onerror="this.src='https://placehold.co/400x300/1d4ed8/ffffff?text=Scouting+and+Parade'" alt="Scouting & Leadership" class="w-full h-40 object-cover rounded-xl mb-4" />
+                    <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">Scouting & Parades</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">Building discipline, teamwork, first-aid, and civic responsibility.</p>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-all">
+                    <img src="assets/images/learner-speaking-at-assembly.webp" onerror="this.src='https://placehold.co/400x300/1d4ed8/ffffff?text=Public+Speaking'" alt="Debate & Public Speaking" class="w-full h-40 object-cover rounded-xl mb-4" />
+                    <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">Debate & Public Speaking</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">Fostering articulate expression, research skills, and self-confidence.</p>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-all">
+                    <img src="assets/images/learners-at-school-event.webp" onerror="this.src='https://placehold.co/400x300/1d4ed8/ffffff?text=Sports+Clubs'" alt="Sports & Athletics" class="w-full h-40 object-cover rounded-xl mb-4" />
+                    <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">Sports & Athletics</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">Football, athletics, swimming, and indoor games for physical health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION & LIGHTBOX -->
+    <section id="gallery" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-royal-700 dark:text-amber-400 mb-2">Campus Life in Pictures</h2>
+                    <h3 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Our Photo Gallery</h3>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 text-sm max-w-md mt-2 md:mt-0">
+                    Snapshots of learning moments, achievements, cultural festivals, and celebrations at Mary Royal School.
+                </p>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl h-52 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('assets/images/1.webp', 'School Event 1')">
+                    <img src="assets/images/1.webp" onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Gallery+1'" alt="Gallery Image 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl h-52 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('assets/images/2.webp', 'School Event 2')">
+                    <img src="assets/images/2.webp" onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Gallery+2'" alt="Gallery Image 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl h-52 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('assets/images/3.webp', 'School Event 3')">
+                    <img src="assets/images/3.webp" onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Gallery+3'" alt="Gallery Image 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl h-52 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('assets/images/graduation-gifts-display.webp', 'Graduation Gifts')">
+                    <img src="assets/images/graduation-gifts-display.webp" onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Graduation+Gifts'" alt="Graduation Gifts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl h-52 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('assets/images/school-celebration-stage.webp', 'Celebration Stage')">
+                    <img src="assets/images/school-celebration-stage.webp" onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Celebration+Stage'" alt="Celebration Stage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl h-52 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('assets/images/school-graduation-hero.webp', 'Graduation Ceremony')">
+                    <img src="assets/images/school-graduation-hero.webp" onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Graduation+Hero'" alt="Graduation Day" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl h-52 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('assets/images/4.webp', 'School Activity')">
+                    <img src="assets/images/4.webp" onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Gallery+4'" alt="School Activity" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl h-52 bg-slate-200 dark:bg-slate-800" onclick="openLightbox('assets/images/5.webp', 'School Event')">
+                    <img src="assets/images/5.webp" onerror="this.src='https://placehold.co/500x500/1d4ed8/ffffff?text=Gallery+5'" alt="School Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS & CALENDAR -->
+    <section id="events" class="py-16 sm:py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 mb-2">Upcoming Activities</h2>
+                <h3 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">School Events & Dates</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Event 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-start gap-4">
+                    <div class="bg-royal-700 text-white rounded-xl p-3 text-center min-w-[64px] shrink-0">
+                        <span class="block text-xl font-extrabold font-display leading-none">15</span>
+                        <span class="text-[10px] uppercase tracking-wider font-semibold">NOV</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-base">Annual Sports Day</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="far fa-clock mr-1"></i>8:30 AM - 4:00 PM</p>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">Inter-house track competitions, games, and award distribution.</p>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-start gap-4">
+                    <div class="bg-amber-600 text-white rounded-xl p-3 text-center min-w-[64px] shrink-0">
+                        <span class="block text-xl font-extrabold font-display leading-none">28</span>
+                        <span class="text-[10px] uppercase tracking-wider font-semibold">NOV</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-base">Graduation & Thanksgiving</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="far fa-clock mr-1"></i>9:00 AM - 1:00 PM</p>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">Celebrating PP2 and Grade 6 transition to higher learning levels.</p>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-start gap-4">
+                    <div class="bg-emerald-600 text-white rounded-xl p-3 text-center min-w-[64px] shrink-0">
+                        <span class="block text-xl font-extrabold font-display leading-none">05</span>
+                        <span class="text-[10px] uppercase tracking-wider font-semibold">DEC</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white text-base">Parent-Teacher Conference</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="far fa-clock mr-1"></i>8:00 AM - 3:00 PM</p>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">One-on-one progress review for Term III performance with class tutors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-16 sm:py-24 bg-royal-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Parents & Alumni Feedback</h2>
+                <h3 class="font-display text-3xl sm:text-4xl font-extrabold">What Our Community Says</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+                    <div class="flex items-center text-amber-400 gap-1 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-royal-100 text-sm sm:text-base italic leading-relaxed mb-6">
+                        "Mary Royal School has transformed my child’s confidence and academic drive. The teachers are incredibly attentive, and the CBC project guidance is unmatched."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-500 text-slate-900 font-bold flex items-center justify-center">
+                            JM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Jane Mwangi</h4>
+                            <p class="text-xs text-royal-200">Parent (Grade 4 & Grade 7)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+                    <div class="flex items-center text-amber-400 gap-1 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-royal-100 text-sm sm:text-base italic leading-relaxed mb-6">
+                        "The school's emphasis on discipline, Christian values, and public speaking gave my daughter a solid foundation. She seamlessly transitioned into top high school standards."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-500 text-slate-900 font-bold flex items-center justify-center">
+                            KO
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Kevin Otieno</h4>
+                            <p class="text-xs text-royal-200">Alumni Parent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH WORKING FORM -->
+    <section id="contact" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                <!-- Contact Details -->
+                <div class="lg:col-span-5">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-royal-700 dark:text-amber-400 mb-2">Get In Touch</h2>
+                    <h3 class="font-display text-3xl font-extrabold text-slate-900 dark:text-white mb-6">We'd Love to Hear From You</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm mb-8 leading-relaxed">
+                        Have questions regarding admissions, fee structure, or school visits? Contact our administration desk or drop us a message below.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-royal-100 dark:bg-slate-800 text-royal-700 dark:text-amber-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base">School Location</h4>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">Mary Royal School Campus, Off Main Highway, Kenya</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-royal-100 dark:bg-slate-800 text-royal-700 dark:text-amber-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base">Phone & WhatsApp</h4>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">0718216374</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-royal-100 dark:bg-slate-800 text-royal-700 dark:text-amber-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base">Email Address</h4>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">info@maryroyalschool.sc.ke / admissions@maryroyalschool.sc.ke</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-royal-100 dark:bg-slate-800 text-royal-700 dark:text-amber-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base">Office Hours</h4>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">Monday - Friday: 7:30 AM - 5:00 PM<br>Saturday: 8:00 AM - 12:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-md">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="fullName" class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-2">Full Name *</label>
+                                <input type="text" id="fullName" required placeholder="e.g. John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600 transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-2">Email Address *</label>
+                                <input type="email" id="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600 transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" required placeholder="0718216374" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600 transition-colors">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-2">Inquiry Type</label>
+                                <select id="subject" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600 transition-colors">
+                                    <option value="Admissions Inquiry">Admissions Inquiry</option>
+                                    <option value="Fee Structure">Fee Structure</option>
+                                    <option value="School Tour">Schedule School Tour</option>
+                                    <option value="General Question">General Question</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-bold uppercase text-slate-700 dark:text-slate-300 mb-2">Your Message *</label>
+                            <textarea id="message" rows="4" required placeholder="Tell us about your child or inquiry..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full min-h-[48px] py-3 px-6 bg-royal-700 hover:bg-royal-800 text-white font-bold rounded-xl shadow-md transition-all duration-300">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <!-- Alert Box Container (Replaces alert()) -->
+                    <div id="form-alert" class="hidden mt-4 p-4 rounded-xl text-sm font-semibold"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/images/logo-transparent.webp" onerror="this.src='https://placehold.co/60x60/1d4ed8/ffffff?text=MRS'" alt="Mary Royal School Logo" class="h-10 w-10 object-contain" />
+                        <span class="font-display font-extrabold text-xl text-white">Mary Royal School</span>
+                    </div>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Empowering young minds through quality CBC education, character development, and holistic learning since establishment.
+                    </p>
+                    <div class="flex items-center gap-3 mt-6">
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-800 text-slate-300 hover:bg-royal-600 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-slate-800 text-slate-300 hover:bg-royal-600 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-800 text-slate-300 hover:bg-royal-600 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-lg bg-slate-800 text-slate-300 hover:bg-royal-600 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">About Our School</a></li>
+                        <li><a href="#academics" class="hover:text-amber-400 transition-colors">Academic Programmes</a></li>
+                        <li><a href="#activities" class="hover:text-amber-400 transition-colors">Co-Curricular Activities</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition-colors">School Gallery</a></li>
+                        <li><a href="#events" class="hover:text-amber-400 transition-colors">Events & Calendar</a></li>
+                        <li><a href="https://portal.maryroyalschool.co.ke/" class="hover:text-amber-400 transition-colors">Staff / Parent / Learner Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Academics</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#academics" class="hover:text-amber-400 transition-colors">Playgroup & Kindergarten</a></li>
+                        <li><a href="#academics" class="hover:text-amber-400 transition-colors">Primary CBC (Grade 1-6)</a></li>
+                        <li><a href="#academics" class="hover:text-amber-400 transition-colors">Junior Secondary (Grade 7-9)</a></li>
+                        <li><a href="#academics" class="hover:text-amber-400 transition-colors">Computer & STEM Labs</a></li>
+                        <li><a href="#academics" class="hover:text-amber-400 transition-colors">Guidance & Counseling</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Admissions & Contact</h4>
+                    <p class="text-xs text-slate-400 mb-3">Admissions office is open Mon-Fri during working hours.</p>
+                    <button onclick="openModal('admissions-modal')" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-slate-900 font-bold rounded-xl text-xs transition-colors">
+                        Apply Online Today
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Mary Royal School. All Rights Reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="sitemap.xml" class="hover:text-slate-400">Sitemap</a>
+                    <a href="robots.txt" class="hover:text-slate-400">Robots.txt</a>
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ADMISSIONS MODAL -->
+    <div id="admissions-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeModalOnOutsideClick(event, 'admissions-modal')">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 relative modal-enter modal-enter-active">
+            <button onclick="closeModal('admissions-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-white p-2">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-royal-100 dark:bg-slate-800 text-royal-700 dark:text-amber-400 mx-auto flex items-center justify-center text-xl mb-3">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white">Admission Application</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Fill in the details below to initiate registration for your child.</p>
+            </div>
+
+            <form id="admission-form" onsubmit="handleAdmissionSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Parent/Guardian Name</label>
+                    <input type="text" required placeholder="Full Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Phone Number</label>
+                    <input type="tel" required placeholder="0718216374" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Child's Name & Current Age</label>
+                    <input type="text" required placeholder="e.g. Mary Wanjiku (6 Years)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Grade / Level Applying For</label>
+                    <select required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-royal-600">
+                        <option value="">Select Level</option>
+                        <option value="Playgroup / PP1 / PP2">Playgroup / Early Childhood</option>
+                        <option value="Primary Grade 1-6">Primary School (Grade 1 - 6)</option>
+                        <option value="Junior Secondary Grade 7-9">Junior Secondary (Grade 7 - 9)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-royal-700 hover:bg-royal-800 text-white font-bold rounded-xl shadow-md text-sm transition-all mt-4">
+                    Submit Application
+                </button>
+            </form>
+
+            <div id="admission-alert" class="hidden mt-4 p-3 rounded-xl text-xs font-semibold text-center"></div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full text-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-2xl hover:text-amber-400 p-2">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Enlarged View" class="max-h-[80vh] mx-auto rounded-2xl shadow-2xl object-contain">
+            <p id="lightbox-caption" class="text-white text-sm font-semibold mt-4"></p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- Dark Mode Logic ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                themeIcon.className = 'fas fa-sun text-amber-400';
+                mobileThemeIcon.className = 'fas fa-sun text-amber-400';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeIcon.className = 'fas fa-moon';
+                mobileThemeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Initialize theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        themeToggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+        mobileThemeToggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+
+        // --- Mobile Drawer Controls & Accessibility ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
+        const mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
+        const menuIconBars = document.getElementById('menu-icon-bars');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        function openMobileMenu() {
+            mobileNavDrawer.classList.remove('translate-x-full');
+            mobileNavBackdrop.classList.remove('hidden');
+            document.body.classList.add('scroll-locked');
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            menuIconBars.classList.add('hidden');
+            menuIconClose.classList.remove('hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileNavDrawer.classList.add('translate-x-full');
+            mobileNavBackdrop.classList.add('hidden');
+            document.body.classList.remove('scroll-locked');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            menuIconBars.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            if (isExpanded) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+
+        // Close mobile drawer on Escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+                closeModal('admissions-modal');
+                closeLightbox();
+            }
+        });
+
+        // --- Modal Management ---
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.classList.add('scroll-locked');
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.classList.remove('scroll-locked');
+            }
+        }
+
+        function closeModalOnOutsideClick(event, id) {
+            if (event.target.id === id) {
+                closeModal(id);
+            }
+        }
+
+        // --- Form Submission Helpers ---
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            alertBox.className = "mt-4 p-4 rounded-xl text-sm font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200 block";
+            alertBox.textContent = "Thank you! Your message has been sent successfully. Our administration will contact you shortly.";
+            document.getElementById('contact-form').reset();
+        }
+
+        function handleAdmissionSubmit(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('admission-alert');
+            alertBox.className = "mt-4 p-3 rounded-xl text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200 block";
+            alertBox.textContent = "Application submitted! Our admissions desk will reach out with the application pack.";
+            document.getElementById('admission-form').reset();
+            setTimeout(() => {
+                closeModal('admissions-modal');
+                alertBox.classList.add('hidden');
+            }, 3000);
+        }
+
+        // --- Lightbox Gallery ---
+        function openLightbox(imgSrc, caption) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-caption').textContent = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+            document.body.classList.add('scroll-locked');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            document.body.classList.remove('scroll-locked');
+        }
+    </script>
+</body>
+</html>
